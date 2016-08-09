@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="ehcache.xsd"
+     updateCheck="true" monitoring="autodetect" dynamicConfig="true">
+     
+    <cache name="clientCache" 
+      maxEntriesLocalHeap="5000"
+      maxEntriesLocalDisk="1000" 
+      eternal="false" 
+      diskSpoolBufferSizeMB="20" 
+      timeToIdleSeconds="20" 
+      timeToLiveSeconds="50" 
+      memoryStoreEvictionPolicy="LFU" 
+      transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+    
+    <cache name="clientRoleCache" 
+      maxEntriesLocalHeap="5000"
+      maxEntriesLocalDisk="1000" 
+      eternal="false" 
+      diskSpoolBufferSizeMB="20" 
+      timeToIdleSeconds="200" 
+      timeToLiveSeconds="500" 
+      memoryStoreEvictionPolicy="LFU" 
+      transactionalMode="off">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+  </ehcache
